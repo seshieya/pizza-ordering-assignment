@@ -1,0 +1,45 @@
+{
+    "size": {
+        "large": {
+            "description": "14\" Large",
+            "price": 23
+        },
+        "medium": {
+            "description": "12\" Medium",
+            "price": 19
+        },
+        "small": {
+            "description": "9\" Small",
+            "price": 14
+        } 
+    },
+    "crust": {
+        "stuffed": {
+            "description": "Stuffed",
+            "price": 3
+        },
+        "thin": {
+            "description": "Thin",
+            "price": 2
+        },
+        "homestyle": {
+            "description": "Homestyle",
+            "price": 1
+        }
+    },
+    "toppings": {
+        "items": {
+            "pepperoni": "pepperoni",
+            "bacon": "bacon",
+            "ham": "ham",
+            "chicken": "chicken",
+            "pepper": "green pepper",
+            "mushrooms": "mushrooms",
+            "olives": "olives",
+            "pineapple": "pineapple"     
+        },
+        "price": 0.50        
+    }
+
+
+}

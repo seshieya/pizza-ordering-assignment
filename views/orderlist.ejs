@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include head %>
+</head>
+
+<body>
+  <% include nav %>
+    <div class="container">
+      <h1>Orders</h1>
+
+      <div id="search-div">
+        <form id="search-form" method="get">
+          <div class="input-group">
+            <input type="text" id="searchphone" name="searchphone" placeholder="Phone Number" />
+            <input type="text" id="searchaddress" name="searchaddress" placeholder="Address" />
+            <span class="input-group-btn">
+            <input type="submit" class="btn btn-outline-primary" id="orderlist-page-submit-btn" value="Search" />
+          </span>
+          </div>
+          <!-- /input-group -->
+        </form>
+      </div>
+
+      <div id="searchMsg"></div>
+
+      <table class="table table-striped table-bordered
+      table-hover table-condensed" id="order-list">
+        <th>Details</th>
+        <th>Total</th>
+      </table>
+    </div>
+
+<footer class="footer">
+    <% include footer %>
+</footer>
+
+<% include scripts %>
+
+</body>
+
+</html>

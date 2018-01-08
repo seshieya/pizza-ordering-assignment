@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Student name: Hsiu-Man Angela Wu
+     Student number: A00750330 -->
+<html lang="en">
+<head>
+    <% include head %>
+</head>
+<body>
+
+<% include nav %>
+
+<div class="container">
+    <h1>How may I take your pizza order?</h1>
+
+    <form method="post" id="submit-form">
+
+        <h2>Customer Information:</h2>
+
+        <input  type="text"
+                name="name"
+                id="name"
+                placeholder="Your name" />
+        <br />
+
+        <input  type="text"
+                name="phone"
+                id="phone"
+                placeholder="Your phone number" />
+        <br />
+        
+
+        <input  type="text"
+                name="address"
+                id="address"
+                placeholder="Your address" />
+
+        <h2>Size:</h2>
+
+        <% Object.keys(size).forEach(function(property) { %>
+                <input  type="radio"
+                        name="size"
+                        id="size-<%= property %>"
+                        value="<%= size[property].description %>" />
+                        <label for="size-<%= property %>"><%= size[property].description %></label>
+                        <em>$<%= size[property].price %>.00</em>
+                <br />
+        <% }); %>
+
+        
+        <h2>Crust:</h2>
+
+        <% Object.keys(crust).forEach(function(property) { %>
+                <input  type="radio"
+                        name="crust"
+                        id="crust-<%= property %>"
+                        value="<%= crust[property].description %>" />
+                        <label for="crust-<%= property %>"><%= crust[property].description %></label>
+                        <em>$<%= crust[property].price %>.00</em>
+                <br />
+        <% }); %>
+
+
+        <h2>Toppings:</h2>
+
+        <p><em>$<%= toppings.price%>0 per topping </em></p>
+        
+        <% Object.keys(toppings.items).forEach(function(property) { %>
+            <input  type="checkbox"
+                    name="toppings"
+                    id="toppings-<%= toppings.items[property]%>"
+                    value="<%= toppings.items[property]%>" />
+                    <label for="toppings-<%= toppings.items[property]%>"><%= toppings.items[property] %></label>
+            <br />
+        <% }); %>
+        
+             
+
+        <h2>Quantity:</h2>
+        <input  type="text"
+                name="quantity"
+                id="quantity"
+                placeholder="Number of pizzas" />
+        <br />
+
+        
+
+        <input  type="submit" 
+                class="btn btn-outline-primary"
+                id="order-page-submit-btn" />      
+
+    </form>
+    
+
+    <div id="statusMsg">
+    </div>
+
+</div>
+
+<footer class="footer">
+
+    <% include footer %>
+
+</footer>
+
+<% include scripts %>
+
+
+</body>
+</html>
